@@ -5,7 +5,15 @@ function add () {
     let valueBe = document.getElementById("input").value
     array.push(valueBe)
     valueBe = document.getElementById("dis").innerHTML = array;
-}
+};
+
+function addPerson(){
+    let myName = document.getElementById("name").value
+    let mySurname = document.getElementById("surname").value
+    let myAge = document.getElementById("age").value
+    let newPerson = [myName, mySurname, myAge]
+    people.push(newPerson) 
+};
 
 let people = [
   {
@@ -69,4 +77,6 @@ people.forEach((per) => {
     </table>
     `;
 });
+
+    
 
