@@ -81,7 +81,7 @@ function addPerson(){
 
 peoples.push(Value);
  
-let myPeoples = document.getElementById("tableInfo");
+let myPeoples = document.getElementById("tablePeople");
 peoples.forEach((data) => {
 myPeoples.innerHTML += 
 `<tr class="" style="width: 33%">
