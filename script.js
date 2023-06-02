@@ -93,4 +93,7 @@ myPeoples.innerHTML +=
 })
 };
    
-
+function newOne() {
+  localStorage.setItem('name', 'john')
+  localStorage.setItem('surname', 'doe')
+}
