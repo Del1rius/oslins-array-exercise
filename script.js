@@ -7,13 +7,6 @@ function add () {
     valueBe = document.getElementById("dis").innerHTML = array;
 };
 
-function addPerson(){
-    let myName = document.getElementById("name").value
-    let mySurname = document.getElementById("surname").value
-    let myAge = document.getElementById("age").value
-    let newPerson = [myName, mySurname, myAge]
-    people.push(newPerson) 
-};
 
 let people = [
   {
@@ -77,6 +70,24 @@ people.forEach((per) => {
     </table>
     `;
 });
+let peoples = [];
+function addPerson(){
+  let Value = {
+  name: document.getElementById("name").value,
+  surname: document.getElementById("surname").value,
+  age: document.getElementById("age").value
+};
+ peoples.push(Value);
 
-    
+}; 
+let myPeoples = document.getElementById(".tableInfo");
+peoples.innerHTML = "";
+myPeoples.forEach((peoples) => {
+table.innerHTML += 
+`<tr class="text-white"><td>${peoples.name}</td></tr>
+<tr class="text-white"><td>${peoples.surname}</td></tr>`;
+});
+
+
+   
 
