@@ -1,4 +1,4 @@
-// let array1 = document.getElementById("input")
+
 let array = [];
 
 function add () {
@@ -71,23 +71,26 @@ people.forEach((per) => {
     `;
 });
 let peoples = [];
+
 function addPerson(){
   let Value = {
   name: document.getElementById("name").value,
   surname: document.getElementById("surname").value,
   age: document.getElementById("age").value
 };
- peoples.push(Value);
 
-}; 
-let myPeoples = document.getElementById(".tableInfo");
-peoples.innerHTML = "";
-myPeoples.forEach((peoples) => {
-table.innerHTML += 
-`<tr class="text-white"><td>${peoples.name}</td></tr>
-<tr class="text-white"><td>${peoples.surname}</td></tr>`;
-});
-
-
+peoples.push(Value);
+ 
+let myPeoples = document.getElementById("tableInfo");
+peoples.forEach((data) => {
+myPeoples.innerHTML += 
+`<tr class="" style="width: 33%">
+  <td class="fs-4 text-center border-2" style="width: 33%">${data.name}</td>
+  <td class="fs-4 text-center border-2" style="width: 33%">${data.surname}</td>
+  <td class="fs-4 text-center border-2" style="width: 33%">${data.age}</td>
+  </tr>
+  `;
+})
+};
    
 
